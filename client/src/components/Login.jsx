@@ -6,19 +6,15 @@ import axios from "axios"
 const Login = ({setRoleVar}) => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
-  const [role, setRole] = useState('admin')
   const navigate = useNavigate()
 
   axios.defaults.withCredentials = true
   const handleSubmit = () => {
-    axios.post('http://localhost:3001/auth/login', {username, password, role})
+    axios.post('http://localhost:3001/auth/login', {username, password})
     .then(res => {
         if(res.data.login && res.data.role === 'admin'){
           setRoleVar('admin')
-          navigate('/dashboard')
-        }else if(res.data.login && res.data.role === 'student'){
-          setRoleVar('student')
-          navigate('/')
+          navigate('/books')
         }
       }
     )
@@ -40,14 +36,6 @@ const Login = ({setRoleVar}) => {
           <input type="password" placeholder="Enter Password"
           onChange={(e)=>setPassword(e.target.value)}/>
         </div>
-        <div className="form-group">
-          <label htmlFor="role">Role:</label>
-          <select name="role" id="role"
-          onChange={(e)=>setRole(e.target.value)}>
-            <option value="admin">Admin</option>
-            <option value="student">Student</option>
-          </select>
-        </div>
         <button className="btn-login" onClick={handleSubmit}>Login</button>
       </div>
     </div>
@@ -55,4 +43,3 @@ const Login = ({setRoleVar}) => {
 }
 
 export default Login
-Login

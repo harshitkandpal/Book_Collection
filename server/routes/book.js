@@ -5,15 +5,18 @@ import { verifyAdmin } from './auth.js';
 
 router.post('/add',verifyAdmin,async (req,res)=>{
     try{
-        const {name, author, imageUrl} = req.body;
+        const {name, author, imageUrl,pdfUrl} = req.body;
          // Basic validation to check if required fields are provided
-         if (!name || !author || !imageUrl) {
+         if (!name || !author || !imageUrl || !pdfUrl) {
             return res.status(400).json({ message: 'All fields are required' });
         }
         const newbook = new Book ({
             name,
             author,
-            imageUrl
+            genre,
+            year,
+            imageUrl,
+            pdfUrl
         })
         await newbook.save();
         return res.json({added:true})

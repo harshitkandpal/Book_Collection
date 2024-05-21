@@ -12,8 +12,6 @@ const Navbar = ({role}) => {
         {role==='admin' && 
           <>
             <Link to="/addbook" className='navbar-link'>Add Books</Link>
-        <Link to="/addstudent" className='navbar-link'>Add Student</Link>
-        <Link to="/dashboard" className='navbar-link'>Dashboard</Link>
           </>
         }
         {role === '' ? 
