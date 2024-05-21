@@ -5,7 +5,7 @@ const Navbar = ({role}) => {
   return (
     <div className="navbar">
       <div className="navbar-left">
-        <Link to="/" className='navbar-brand'>Book Store</Link>
+        <Link to="/" className='navbar-brand'>Book Collection</Link>
       </div>
       <div className="navbar-right">
         <Link to="/books" className='navbar-link'>Books</Link>

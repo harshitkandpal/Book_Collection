@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-// import "../styles/AddStudent.css";
+// import "../styles/AddeditBook.css";
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from "axios";
 
@@ -42,9 +42,9 @@ const EditBook = () => {
     };
 
     return (
-        <div className="student-page">
-            <div className="student-from-container">
-                <form className="student-form" onSubmit={handleSubmit}>
+        <div className="editBook-page">
+            <div className="editBook-from-container">
+                <form className="editBook-form" onSubmit={handleSubmit}>
                     <h2>Edit Book</h2>
                     <div className="form-group">
                         <label htmlFor="book">Book Name:</label>
@@ -106,7 +106,7 @@ const EditBook = () => {
                             onChange={(e) => setPDFUrl(e.target.value)}
                         />
                     </div>
-                    <button type="submit" className="btn-student">Update</button>
+                    <button type="submit" className="btn-editBook">Update</button>
                 </form>
             </div>
         </div>

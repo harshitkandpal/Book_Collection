@@ -25,7 +25,7 @@ const Login = ({setRoleVar}) => {
   return (
     <div className="login-page">
       <div className="login-container">
-        <h2>Login</h2> <br/>
+        <h2>Admin Login</h2> <br/>
         <div className="form-group">
           <label htmlFor="username">Username:</label>
           <input type="text" placeholder="Enter Username"
