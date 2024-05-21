@@ -46,6 +46,5 @@ PORT = 3001
 URL = "mongodb://127.0.0.1:27017/bookCollection"
 Admin_key = "admin-key"
 ```
-### Admin Login
-username: admin
-password: adminpassword
+### username: admin
+### password: adminpassword
