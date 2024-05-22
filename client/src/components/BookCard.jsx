@@ -8,9 +8,13 @@ const BookCard = ({book,role}) => {
         <img src={imageUrl} alt={name} className="book-image" />
         <div className="book-details">
             <h3>{name}</h3>
-            <p>{author}</p>
-            <p>{genre}</p>
-            <p>{year}</p>
+            <div className='book-card-content'>
+            <div className='book-card-details'>
+            <p>Author: {author}</p>
+            <p>Genre: {genre}</p>
+            </div>
+            <div className='book-card-year'><p>{year}</p></div>
+            </div>
         </div>
         <div className="book-actions">
         <button>

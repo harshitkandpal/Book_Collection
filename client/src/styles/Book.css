@@ -11,11 +11,6 @@
     margin: 10px;
     width: 200px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2 ease-in-out;
-
-    &:hover{
-        transform: scale(1.05);
-    }
 }
 
 .book-card .book-image{
@@ -53,4 +48,9 @@
     &:hover{
         background-color: #2980b9;
     }
+}
+
+.book-card-content{
+    display: flex;
+    justify-content: space-between;
 }

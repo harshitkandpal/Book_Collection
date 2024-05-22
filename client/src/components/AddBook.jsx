@@ -1,5 +1,5 @@
 import {useState} from 'react'
-// import "../styles/AddaddBook.css"
+import "../styles/AddBook.css"
 import {useNavigate} from 'react-router-dom'
 import axios from "axios"
 
@@ -27,7 +27,7 @@ const AddBook = () => {
       }
   return (
     <div className="addBook-page">
-        <div className="addBook-from-container">
+        <div className="addBook-form-container">
         <form className="addBook-form" onSubmit={handleSubmit}>
             <h2>Add Book</h2>
             <div className="form-group">

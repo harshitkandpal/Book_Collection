@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-// import "../styles/AddeditBook.css";
+import "../styles/EditBook.css";
 import { useNavigate, useParams } from 'react-router-dom';
 import axios from "axios";
 
@@ -43,7 +43,7 @@ const EditBook = () => {
 
     return (
         <div className="editBook-page">
-            <div className="editBook-from-container">
+            <div className="editBook-form-container">
                 <form className="editBook-form" onSubmit={handleSubmit}>
                     <h2>Edit Book</h2>
                     <div className="form-group">
