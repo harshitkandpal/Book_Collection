@@ -12,7 +12,7 @@ import DeleteBook from './components/DeleteBook';
 import ViewBook from './components/ViewBook';
 
 function App() {
-  const [role, setRole] = useState('');
+  const [role, setRole] = useState(localStorage.getItem('role') || '');
   axios.defaults.withCredentials = true;
 
   useEffect(() => {
@@ -20,20 +20,27 @@ function App() {
       .then(res => {
         if (res.data.login) {
           setRole(res.data.role);
+          localStorage.setItem('role', res.data.role); // Save role to local storage
         } else {
           setRole('');
+          localStorage.removeItem('role'); // Remove role from local storage
         }
       }).catch(err => console.log(err));
   }, []);
 
+  const handleLogout = () => {
+    setRole('');
+    localStorage.removeItem('role'); // Clear role from local storage on logout
+  };
+
   return (
     <BrowserRouter>
-      <Navbar role={role||''} />
+      <Navbar role={role} />
       <Routes>
         <Route path="/" element={<Home setRole={setRole} />} />
         <Route path="/books" element={<Books role={role} />} />
         <Route path="/login" element={<Login setRoleVar={setRole} />} />
-        <Route path="/logout" element={<Logout setRole={setRole} />} />
+        <Route path="/logout" element={<Logout setRole={handleLogout} />} />
         <Route path="/addbook" element={<AddBook />} />
         <Route path="/book/:id" element={<EditBook />} />
         <Route path="/delete/:id" element={<DeleteBook />} />

@@ -45,12 +45,14 @@ const verifyAdmin = (req, res, next) => {
 
 
 router.get('/verify', verifyAdmin, (req, res) => {
-    return res.json({ login: true });
+    return res.json({ login: true, role: req.role });
 });
+
 
 router.get('/logout', (req, res) => {
     res.clearCookie('token');
-    return res.json({ logout: true, role: req.role });
+    return res.json({ logout: true });
 });
+
 
 export { router as AdminRouter, verifyAdmin };
