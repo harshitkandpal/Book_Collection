@@ -30,7 +30,7 @@ const ViewBook = () => {
   }
 
   return (
-    <div className="view-book">
+    <div className="view-book" >
       <div className="pdf-viewer">
         <iframe
           src={pdfUrl}

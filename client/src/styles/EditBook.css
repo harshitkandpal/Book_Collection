@@ -1,4 +1,4 @@
-.editBook-page{
+.editBook-page {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -9,24 +9,24 @@
     background-color: #301934;
 }
 
-.editBook-form-container{
-    background-color: rgba(255,255,255,0.7);
+.editBook-form-container {
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 300px;
 }
 
-.editBook-form-container h2{
+.editBook-form-container h2 {
     margin-bottom: 20px;
     text-align: center;
 }
 
-.editBook-form-container .form-group{
+.editBook-form-container .form-group {
     margin-bottom: 15px;
 }
 
-.editBook-form-container .form-group label{
+.editBook-form-container .form-group label {
     display: block;
     font-size: 14px;
     font-weight: bold;
@@ -34,14 +34,14 @@
 }
 
 .editBook-form-container .form-group input,
-.editBook-form-container .form-group select{
+.editBook-form-container .form-group select {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
     margin-top: 5px;
 }
 
-.editBook-form-container .btn-editBook{
+.editBook-form-container .btn-editBook {
     background-color: #4caf50;
     color: #fff;
     padding: 10px;
@@ -51,4 +51,53 @@
     cursor: pointer;
     font-weight: bold;
     margin-top: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .editBook-form-container {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .editBook-form-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .editBook-form-container .form-group label {
+        font-size: 13px;
+    }
+
+    .editBook-form-container .form-group input,
+    .editBook-form-container .form-group select {
+        padding: 7px;
+    }
+
+    .editBook-form-container .btn-editBook {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .editBook-form-container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .editBook-form-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .editBook-form-container .form-group label {
+        font-size: 12px;
+    }
+
+    .editBook-form-container .form-group input,
+    .editBook-form-container .form-group select {
+        padding: 6px;
+    }
+
+    .editBook-form-container .btn-editBook {
+        padding: 6px;
+    }
 }

@@ -1,4 +1,4 @@
-.addBook-page{
+.addBook-page {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -9,24 +9,24 @@
     background-color: #301934;
 }
 
-.addBook-form-container{
-    background-color: rgba(255,255,255,0.7);
+.addBook-form-container {
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     width: 300px;
 }
 
-.addBook-form-container h2{
+.addBook-form-container h2 {
     margin-bottom: 20px;
     text-align: center;
 }
 
-.addBook-form-container .form-group{
+.addBook-form-container .form-group {
     margin-bottom: 15px;
 }
 
-.addBook-form-container .form-group label{
+.addBook-form-container .form-group label {
     display: block;
     font-size: 14px;
     font-weight: bold;
@@ -34,14 +34,14 @@
 }
 
 .addBook-form-container .form-group input,
-.addBook-form-container .form-group select{
+.addBook-form-container .form-group select {
     width: 100%;
     padding: 8px;
     box-sizing: border-box;
     margin-top: 5px;
 }
 
-.addBook-form-container .btn-addBook{
+.addBook-form-container .btn-addBook {
     background-color: #4caf50;
     color: #fff;
     padding: 10px;
@@ -51,4 +51,53 @@
     cursor: pointer;
     font-weight: bold;
     margin-top: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .addBook-form-container {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .addBook-form-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .addBook-form-container .form-group label {
+        font-size: 13px;
+    }
+
+    .addBook-form-container .form-group input,
+    .addBook-form-container .form-group select {
+        padding: 7px;
+    }
+
+    .addBook-form-container .btn-addBook {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .addBook-form-container {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .addBook-form-container h2 {
+        font-size: 1.2rem;
+    }
+
+    .addBook-form-container .form-group label {
+        font-size: 12px;
+    }
+
+    .addBook-form-container .form-group input,
+    .addBook-form-container .form-group select {
+        padding: 6px;
+    }
+
+    .addBook-form-container .btn-addBook {
+        padding: 6px;
+    }
 }
