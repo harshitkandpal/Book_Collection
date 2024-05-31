@@ -1,4 +1,6 @@
 ﻿# Book_Collection
+ 
+https://github.com/harshitkandpal/Book_Collection/assets/111063866/b8f87f92-ce0d-4fa7-ba27-ff39a71e7126
 
 ## Overview
 This project consists of a client and a server. The client is built using Vite and React, while the server is built using Node.js. The application features authentication for an admin user and includes various functionalities such as viewing, adding, editing, and deleting books.
